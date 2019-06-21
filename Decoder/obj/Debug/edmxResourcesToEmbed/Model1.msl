@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="DbEntities">
+    <EntitySetMapping Name="Log">
+      <EntityTypeMapping TypeName="Database1Model.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="word" ColumnName="word" />
+          <ScalarProperty Name="key" ColumnName="key" />
+          <ScalarProperty Name="result" ColumnName="result" />
+          <ScalarProperty Name="emcoded" ColumnName="emcoded" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
