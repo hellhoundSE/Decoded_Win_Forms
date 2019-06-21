@@ -20,59 +20,6 @@ namespace Decoder
 
 
 
-        public static string encode2(string word, string key)
-        {
-
-            string result = "";
-            int key_index = 0;
-            char[] arr = key.ToCharArray();
-
-            foreach(char symbol in word)
-            {
-                int c = symbol + arr[key_index];
-                Console.WriteLine("c " + c);
-
-                while(c > 122)
-                    c = 48 + (c % 123);
-                Console.WriteLine("c " + c);
-
-                Console.WriteLine("symbol " + (int)symbol);
-                Console.WriteLine("key_index " + (int)arr[key_index]);
-                Console.WriteLine();
-
-                result += (char)c;
-
-
-                key_index++;
-                if (key_index == key.Length)
-                    key_index = 0;
-            }
-
-            return result;
-        }
-
-        public static string decode2(string word, string key)
-        {
-            string result = "";
-            int key_index = 0;
-            char[] arr = key.ToCharArray();
-
-
-            foreach (char symbol in word)
-            {
-                String cc = (123 - 47) - (arr[key_index]-48)+"";
-                cc = encode(symbol+"", cc);
-               
-                result += cc;
-
-
-                key_index++;
-                if (key_index == key.Length)
-                    key_index = 0;
-            }
-            return result;
-        }
-
         public static string encode(string word, string key)
         {
             String result="";
